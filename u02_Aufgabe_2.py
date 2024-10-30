@@ -47,8 +47,16 @@ def MersenneZahl():
     # Mersenne Zahl: 2^n - 1 in Bit Operationen
     # Bit shift nach links entspricht 2^n
     n = int(input("n: "))
-    n << n
-    print(n)
+    n = n << n
+    print("Die Mersennezahl ist: ",n)
+
+
+
+
+
+
+
+
 # Vorsichtsmaßnahme erklärung muss ich noch raussuchen...duh
 if __name__ == "__main__":
     main()
