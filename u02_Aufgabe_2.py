@@ -58,12 +58,12 @@ def MersenneZahl():
 def Exitfunc():
     while True:
         x = input("möchten Sie zum Menü zuückkehren?(Y/n): ").title()
-        if x == "Y":
+        if x == "Y" or x == "":
             break
         elif x == "N":
             quit()
         else:
-            break
+            print("Nicht bekannte Eingabe, versuchen Sie es mit Y oder n.")
 
 
 
