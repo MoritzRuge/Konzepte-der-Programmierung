@@ -5,10 +5,13 @@ def main():
         match value:
             case "1":
                 Flaechenberechnung()
+                Exitfunc()
             case "2":
                 Schaltjahr()
+                Exitfunc()
             case "3":
                 MersenneZahl()
+                Exitfunc()
             case "Exit":
                 quit()
             case _:
@@ -51,6 +54,16 @@ def MersenneZahl():
     print(f"Die Mersennezahl ist: {n-1}") # #f-string format to insert a variable into the string and perform a arthimetic operation e.g. n-1
 
 
+
+def Exitfunc():
+    while True:
+        x = input("möchten Sie zum Menü zuückkehren?(Y/n): ").title()
+        if x == "Y":
+            break
+        elif x == "N":
+            quit()
+        else:
+            break
 
 
 
