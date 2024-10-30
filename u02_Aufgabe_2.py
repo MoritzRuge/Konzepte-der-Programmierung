@@ -66,14 +66,14 @@ def Umwandler():
             ascii_number = ord(user_input.lower()) # If upper True get the ascii number for the lower case letter
             reverse_letter = chr(ascii_number) # reverse back to a letter
             print(f"Output: {reverse_letter}") # output the reversed letter
-            break
-        elif user_input.islower() == True:
-            ascii_number = ord(user_input.upper())
-            reverse_letter = chr(ascii_number)
-            print(f"Output: {reverse_letter}")
-            break
-        else:
-            print("Zahlen sind nicht erlaubt.")
+            break # breaks the loop
+        elif user_input.islower() == True: # Check if the user inputs a lower case character
+            ascii_number = ord(user_input.upper()) # reverses the input to get the uppercase dezimal characters
+            reverse_letter = chr(ascii_number) # revert the dez back to an upper case character
+            print(f"Output: {reverse_letter}") # print out the reversed character in f string format
+            break # breaks the loop
+        else: # inputs other than letters will not be accepted
+            print("Zahlen/Sonderzeichen sind nicht erlaubt.")
 
 
 def Exitfunc():
