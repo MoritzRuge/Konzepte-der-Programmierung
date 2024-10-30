@@ -12,6 +12,9 @@ def main():
             case "3":
                 MersenneZahl()
                 Exitfunc()
+            case "4":
+                Umwandler()
+                Exitfunc()
             case "Exit":
                 quit()
             case _:
@@ -56,14 +59,21 @@ def MersenneZahl():
 
 # User inputs a letter and gets converted to a chr()
 def Umwandler():
-    ascii = {
-         'A': 65, 'B': 66, 'C': 67, 'D': 68, 'E': 69, 'F': 70, 'G': 71, 'H': 72, 'I': 73, 'J': 74,
- 'K': 75, 'L': 76, 'M': 77, 'N': 78, 'O': 79, 'P': 80, 'Q': 81, 'R': 82, 'S': 83, 'T': 84,
- 'U': 85, 'V': 86, 'W': 87, 'X': 88, 'Y': 89, 'Z': 90,
- 'a': 97, 'b': 98, 'c': 99, 'd': 100, 'e': 101, 'f': 102, 'g': 103, 'h': 104, 'i': 105, 'j': 106,
- 'k': 107, 'l': 108, 'm': 109, 'n': 110, 'o': 111, 'p': 112, 'q': 113, 'r': 114, 's': 115, 't': 116,
- 'u': 117, 'v': 118, 'w': 119, 'x': 120, 'y': 121, 'z': 122
-            }
+    print("Hallo, Willkommen beim Umwandler. Bitte geben Sie ihren Buchstaben ein.")
+    while True:
+        user_input = input("Input: ")
+        if user_input.isupper() == True: # Check if the user input is a Upper character
+            ascii_number = ord(user_input.lower()) # If upper True get the ascii number for the lower case letter
+            reverse_letter = chr(ascii_number) # reverse back to a letter
+            print(f"Output: {reverse_letter}") # output the reversed letter
+            break
+        elif user_input.islower() == True:
+            ascii_number = ord(user_input.upper())
+            reverse_letter = chr(ascii_number)
+            print(f"Output: {reverse_letter}")
+            break
+        else:
+            print("Zahlen sind nicht erlaubt.")
 
 
 def Exitfunc():
