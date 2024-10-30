@@ -1,6 +1,6 @@
 def main():
     while True:
-        print("1.Flächenberechnung\n2.Schaltjahr\n3.Mersennezahl\nExit\nBitte wählen Sie mittels 1-4 oder geben Sie Exit ein um das Programm zu beenden.")
+        print("1.Flächenberechnung\n2.Schaltjahr\n3.Mersennezahl\n4.Umwandler\n5.Cinematicket\nExit\nBitte wählen Sie mittels 1-4 oder geben Sie Exit ein um das Programm zu beenden.")
         value = input().title()
         match value:
             case "1":
@@ -14,6 +14,9 @@ def main():
                 Exitfunc()
             case "4":
                 Umwandler()
+                Exitfunc()
+            case "5":
+                Cinematicket()
                 Exitfunc()
             case "Exit":
                 quit()
@@ -75,16 +78,37 @@ def Umwandler():
         else: # inputs other than letters will not be accepted
             print("Zahlen/Sonderzeichen sind nicht erlaubt.")
 
-
-def Exitfunc():
+def Cinematicket():
+    # Kinder unter 12J. zahlen 10€ jugendliche bis 18J 12€ Erwachsene 14€ Rentner ab 65J 12€
+    print("Willkommen im Kino, wie alt sind Sie?")
     while True:
-        x = input("möchten Sie zum Menü zuückkehren?(Y/n): ").title()
-        if x == "Y" or x == "":
-            break
-        elif x == "N":
+        age = int(input("Alter: "))
+        if age < 12: # check if age is less then 12
+            print("Sie zahlen 10€")
+            break # breaks while loop
+        elif age < 18: # check if age is less then 18
+            print("Sie zahlen 12€")
+            break # breaks while loop
+        elif age < 65: # check if age is less then 65
+            print("Sie zahlen 14€")
+            break # breaks while loop
+        else: # age above 65
+            print("Sie zahlen 12€")
+            break # breaks while loop
+
+
+
+
+# Exit function for quality of life
+def Exitfunc():
+    while True: # endless loop
+        x = input("möchten Sie zum Menü zuückkehren?(Y/n): ").title() # gets user input, changes the first input letter to an upper case letter
+        if x == "Y" or x == "": # checks if the user inputs Y or nothing (defaults to Y)
+            break # breaks the while loop
+        elif x == "N": # if user input is N, quits the program
             quit()
         else:
-            print("Nicht bekannte Eingabe, versuchen Sie es mit Y oder n.")
+            print("Nicht bekannte Eingabe, versuchen Sie es mit Y oder n.") # catches faulty user input
 
 
 
