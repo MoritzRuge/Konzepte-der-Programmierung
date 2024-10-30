@@ -46,8 +46,13 @@ def Schaltjahr():
 def MersenneZahl():
     # Mersenne Zahl: 2^n - 1 in Bit Operationen
     # Bit shift nach links entspricht 2^n
-    n = int(input("n: "))
-    n = n << n
+    n = int(input("n: ")) # get user input and convert str to int
+    n = n << n # perfom a bitshift to the left, which corrospons to n * 2^n
+    # ToDo Bit Operation minus 1
+    #So far n = 2^n
+    #Idee Bitoperation & für minus 1 ? Bsp.: 1111 % 0001 = 1110 was minus 1 wäre
+    n = n | 1
+
     print("Die Mersennezahl ist: ",n)
 
 
