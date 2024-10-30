@@ -1,6 +1,6 @@
 def main():
     while True:
-        print("1.Flächenberechnung\n2.Schaltjahr\n3.Mersennezahl\n4.Umwandler\n5.Cinematicket\nExit\nBitte wählen Sie mittels 1-4 oder geben Sie Exit ein um das Programm zu beenden.")
+        print("1.Flächenberechnung\n2.Schaltjahr\n3.Mersennezahl\n4.Umwandler\n5.Cinematicket\nExit\nBitte wählen Sie mittels 1-5 oder geben Sie Exit ein um das Programm zu beenden.")
         value = input().title()
         match value:
             case "1":
