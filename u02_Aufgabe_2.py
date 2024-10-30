@@ -54,6 +54,9 @@ def MersenneZahl():
     print(f"Die Mersennezahl ist: {n-1}") # #f-string format to insert a variable into the string and perform a arthimetic operation e.g. n-1
 
 
+# User inputs a letter and gets converted to a chr()
+def Umwandler():
+    ascii = {
 
 def Exitfunc():
     while True:
